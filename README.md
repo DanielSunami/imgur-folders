@@ -20,7 +20,7 @@ After loaded a plus tag is placed beside every image in a post and a box called 
 
 So far there is no support to sub folders.
 As long as the folders box appears on screen you'll only need to hit **Q** to place plus tags on all post's images.
-### Considerations
+# Considerations
 - Your folders are stored in your browser nothing is sent to imgur servers or any server at all.
 - If you change PC or Browser your folders won't be there, if you clear your browser data you'll wipe your folders.
 - The add button at the bottom of folders box isn't working.
