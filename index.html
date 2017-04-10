@@ -6,9 +6,9 @@
 
 	<title>imgur-folders</title>
 
-	<link rel="stylesheet" href="style/font.css" />
-	<link rel="stylesheet" href="style/main.css" />
-	<link rel="stylesheet" href="style/prism.css" />
+	<link rel="stylesheet" href="/imgur-folders/style/font.css" />
+	<link rel="stylesheet" href="/imgur-folders/style/main.css" />
+	<link rel="stylesheet" href="/imgur-folders/style/prism.css" />
 	<link rel="canonical" href="http://danielsunami.github.io/imgur-folders/">
 
 	<link href="https://plus.google.com/+DanielSunami" rel="publisher" />
@@ -27,41 +27,28 @@
 		</header>
 		<div class="block">
 			<p>This small project uses modern browsers technology to store your images. It doesn't send or gather any information about you, your browser data or imgur account, the <a href="https://github.com/DanielSunami/imgur-folders">source code</a> is available so you can check it out.</p>
-
+			<p>Copy the following script:<br/>
 			<pre><code class="language-js">!(function(){var a=document.createElement("script");a.src="https://danielsunami.github.io/imgur-folders/dist/main.js";document.getElementsByTagName("head")[0].appendChild(a);})()</code></pre>
+			Open your browser console (chrome hit F12 or ctrl+shit+i) paste it and hit enter.<br/>
+			Tip: you can use up arrow key to repeat last command.</p>
+			<p><img src="http://i.imgur.com/oxyRBfy.png"/></p>
+			<p><img src="http://i.imgur.com/n7U5wbc.png"/></p>
+			<h3></h3>
+			<p><strong></strong></p>
+			<h3></h3>
 			<p></p>
-			<pre><code class="language-js">module.exports = function(req,res){
-	res.send('a html form');
-}</code></pre><p>Full path: project_dir/routes/get.js<br/>Will be mapped to <strong>/</strong></p>
-			<h3>/new/@id/post.js</h3>
-			<pre><code class="language-js">module.exports = function(req,res){
-	req.params.id; //do something
-	res.send('a html response');
-}</code></pre>
-			<p>Full path: project_dir/routes/new/@id/post.js<br/>Will be mapped to <strong>/new/:id</strong></p>
-			<h3>index.js</h3>
-			<p>Finally lets see the application entry point.</p>
-			<pre><code class="language-js"></code></pre>
 		</div>
-		<div class="block">
-			<h2>Example</h2>
-			<p>A simple registration and login application, built only with express, dir-routes and 3 routes.<br/>
-			<a href="https://github.com/DanielSunami/dir-routes/raw/gh-pages/example.zip">Download!</a></p>
-			After downloaded extract the folder and execute with:
-			<pre><code class="language-none">node example</code></pre>
-		</div>
-		<div class="block">
-			<h2>Get it!</h2>
-			<h3 class="light-text">npm install dir-routes</h3>
-		</div>
+		
 		<div class="block">
 			<h2>License</h2>
 			<h3 class="light-text">MIT</h3>
+			<div id="disqus_thread"></div>
+			<script>var disqus_config = function(){this.page.url = 'http://danielsunami.github.io/imgur-folders/';this.page.identifier = 'imgur-folders';};(function(){var d = document, s = d.createElement('script');s.src = 'https://imgur-folders.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();</script>
+			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		</div>
 	</div>
-	<div id="disqus_thread"></div>
-	<script>var disqus_config = function(){this.page.url = 'http://danielsunami.github.io/imgur-folders/';this.page.identifier = 'imgur-folders';};(function(){var d = document, s = d.createElement('script');s.src = 'https://imgur-folders.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();</script>
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	<script src="lib/prism.js"></script>
+	<script src="/imgur-folders/lib/prism.js"></script>
 </body>
 </html>
+
+<blockquote class="imgur-embed-pub" lang="en" data-id="">
