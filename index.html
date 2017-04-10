@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>imgur-folders</title>
+
+	<link rel="stylesheet" href="style/font.css" />
+	<link rel="stylesheet" href="style/main.css" />
+	<link rel="stylesheet" href="style/prism.css" />
+	<link rel="canonical" href="http://danielsunami.github.io/imgur-folders/">
+
+	<link href="https://plus.google.com/+DanielSunami" rel="publisher" />
+	<meta name="keywords" content="imgur,GitHub,DanielSunami" />
+	<meta name="author" content="DanielSunami" />
+</head>
+<body>
+
+<div class="content">
+		<header class="block flex">
+			<a href="/dir-routes/" class="header-link" style="width: 66.66%;">
+				<div>
+					<h1>dir-routes</h1>
+				</div>
+			</a>
+			<a href="/dir-routes/why-use-it/" class="header-link header-item" style="width: 33.33%;">
+				<div style="line-height: 300%;">
+					<h2 class="light-text">why use it?</h2>
+				</div>
+			</a>
+		</header>
+		<div class="block">
+			<h2 class="light-text">
+				<div class="flex">
+					<div>No configuration file.</div>
+					<div>Intuitive.</div>
+				</div>
+				<div class="flex">
+					<div>Maintainable.</div>
+					<div>Simple.</div>
+				</div>
+			</h2>
+			<p>Use your folder structure as routes, it uses the path as route and filename as HTTP method, also works with route “parameters”. Consider the following project folder:</p>
+
+			<pre><code class="language-none">-| node_modules
+-| routes
+ | -| new
+ |  | -| @id
+ |  |  | -| post.js
+ | -| get.js
+-| index.js</code></pre>
+			<p>Inside the <strong>routes</strong> folder we have two files: <strong>/new/@id/post.js</strong> and <strong>/get.js</strong>; now lets take a look at each one of them.<br/><h3>/get.js</h3></p>
+			<pre><code class="language-js">module.exports = function(req,res){
+	res.send('a html form');
+}</code></pre><p>Full path: project_dir/routes/get.js<br/>Will be mapped to <strong>/</strong></p>
+			<h3>/new/@id/post.js</h3>
+			<pre><code class="language-js">module.exports = function(req,res){
+	req.params.id; //do something
+	res.send('a html response');
+}</code></pre>
+			<p>Full path: project_dir/routes/new/@id/post.js<br/>Will be mapped to <strong>/new/:id</strong></p>
+			<h3>index.js</h3>
+			<p>Finally lets see the application entry point.</p>
+			<pre><code class="language-js">var express = require('express'),
+http = require('http'),
+app = express(),
+router = require('dir-routes');
+
+app.use(router); // <- dir-routes exports a Express Router object, just use it
+
+app.use(function(req, res) {
+	res.status(404).end('404: Page not Found');
+});
+
+var httpServer = http.createServer(app);
+
+httpServer.listen(8080, function() {
+	console.log('Listening on port %d', httpServer.address().port);
+});</code></pre>
+		</div>
+		<div class="block">
+			<h2>Example</h2>
+			<p>A simple registration and login application, built only with express, dir-routes and 3 routes.<br/>
+			<a href="https://github.com/DanielSunami/dir-routes/raw/gh-pages/example.zip">Download!</a></p>
+			After downloaded extract the folder and execute with:
+			<pre><code class="language-none">node example</code></pre>
+		</div>
+		<div class="block">
+			<h2>Get it!</h2>
+			<h3 class="light-text">npm install dir-routes</h3>
+		</div>
+		<div class="block">
+			<h2>License</h2>
+			<h3 class="light-text">MIT</h3>
+		</div>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+var disqus_config=function(){this.page.url='http://danielsunami.github.io/dir-routes/';this.page.identifier='dir-routes';};(function(){var d=document,s=d.createElement('script');s.src='//dir-routes.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();
+	</script>
+	</div>
+
+	<script src="lib/prism.js"></script>
+	
+	<div id="disqus_thread"></div>
+	<script>var disqus_config = function(){this.page.url = 'http://danielsunami.github.io/imgur-folders/';this.page.identifier = 'imgur-folders';};(function(){var d = document, s = d.createElement('script');s.src = 'https://imgur-folders.disqus.com/embed.js';s.setAttribute('data-timestamp', +new Date());(d.head || d.body).appendChild(s);})();</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+</html>
