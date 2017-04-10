@@ -8,7 +8,6 @@
 
 	<link rel="stylesheet" href="/imgur-folders/style/font.css" />
 	<link rel="stylesheet" href="/imgur-folders/style/main.css" />
-	<link rel="stylesheet" href="/imgur-folders/style/prism.css" />
 	<link rel="canonical" href="http://danielsunami.github.io/imgur-folders/">
 
 	<link href="https://plus.google.com/+DanielSunami" rel="publisher" />
@@ -28,15 +27,31 @@
 		<div class="block">
 			<p>This small project uses modern browsers technology to store your images. It doesn't send or gather any information about you, your browser data or imgur account, the <a href="https://github.com/DanielSunami/imgur-folders">source code</a> is available so you can check it out.</p>
 			<p>Copy the following script:<br/>
-			<pre><code class="language-js">!(function(){var a=document.createElement("script");a.src="https://danielsunami.github.io/imgur-folders/dist/main.js";document.getElementsByTagName("head")[0].appendChild(a);})()</code></pre>
+			<pre><code>!(function(){var a=document.createElement("script");a.src="https://danielsunami.github.io/imgur-folders/dist/main.js";document.getElementsByTagName("head")[0].appendChild(a);})()<code></pre>
 			Open your browser console (chrome hit F12 or ctrl+shit+i) paste it and hit enter.<br/>
 			Tip: you can use up arrow key to repeat last command.</p>
-			<p><img src="http://i.imgur.com/oxyRBfy.png"/></p>
-			<p><img src="http://i.imgur.com/n7U5wbc.png"/></p>
-			<h3></h3>
-			<p><strong></strong></p>
-			<h3></h3>
-			<p></p>
+			<p>After loaded a plus tag is placed beside every image in a post and a box called "folders" should appear.<br/>
+				<img src="http://i.imgur.com/oxyRBfy.png"/><br/>
+				<ul>
+					<li>Hit a plus to expand the tag.</li>
+					<li>Click the button add to add image to root folder.</li>
+					<li>Write the name of the folder you want to put the image on in the tag input text.</li>
+					<li>Click a name of a folder to open it.</li>
+					<li>Click in the two dots to go to root folder.</li>
+					<li>Click a image to copy the image URL.</li>
+				</ul>
+				So far there is no support to sub folders.
+				As long as the folders box appears on screen you'll only need to hit <strong>Q</strong> to place plus tags on all post's images.
+				<img src="http://i.imgur.com/n7U5wbc.png"/>
+			</p>
+			<h3>Considerations</h3>
+			<p>
+				<ul>
+					<li>Your folders are stored in your browser nothing is sent to imgur servers or any server at all.</li>
+					<li>If you change PC or Browser your folders won't be there, if you clear your browser data you'll wipe your folders.</li>
+					<li>The add button at the bottom of folders box isn't working.</li>
+				</ul>
+			</p>
 		</div>
 		
 		<div class="block">
@@ -47,7 +62,6 @@
 			<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 		</div>
 	</div>
-	<script src="/imgur-folders/lib/prism.js"></script>
 </body>
 </html>
 
