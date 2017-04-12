@@ -20,6 +20,12 @@ img {
     margin: 0 auto;
 }
 
+code {
+	display: block;
+	margin: 2em 0;
+	word-break: break-all;
+}
+
 .content {
 	max-width: 900px;
 	padding: 0 2em;
