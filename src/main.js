@@ -82,13 +82,13 @@ function updateFolder(folder = ''){
 function a() {
 	$('.post-image').each(function(i, elem){
 		var input = $('<input type="text" style="display: inline-block; width: 65%; margin: 2px 7px 2px 2px;" placeholder="folder (optional)">');
-		$('<div class="folders" style="left: '+($(elem).position().left-34)+'px;">')
+		$('<div class="folders" style="position: absolute; margin-top: 20px; padding: 1px 4px 0 2px; width:245px; text-align:center; color: #f2f2f2; left: '+($(elem).position().left-34)+'px; background-color: #2c2f34;">')
 			.append(
-				$('<div class="icon-plus folders-icon"></div>')
+				$('<div class="icon-plus" style="display: inline-block;vertical-align: sub;padding: 0 7px 0 7px;"></div>')
 					.click(function(e){$(this.parentElement).animate({left: ($(elem).position().left-$(this.parentElement).innerWidth())+"px"}, function(){$(this).css('z-index','2')})}),
 				input,
 				$('<button class="btn-small" style="display: inline-block; background-color: #1bb76e; padding: 8px 10px 6px; font-weight: 600;">Add</button>')
-					.click(function (e){
+					.click(function(e){
 						if(/\/(\/+)/g.test(input.val()) || /^\//.test(input.val()) || /\/$/.test(input.val())) {
 							return false;
 						}
